@@ -9,7 +9,7 @@
   
   <thead>
     <tr>
-      <th scope="col">#</th>
+      {{-- <th scope="col">#</th> --}}
       <th scope="col">Created By</th>
       <th scope="col">title</th>
       <th scope="col">slug</th>
@@ -21,7 +21,7 @@
   <tbody>
     @foreach($posts as $index => $value)  
     <tr>
-    <th scope="row">{{$value['id']}}</th>
+    {{-- <th scope="row">{{$value['id']}}</th> --}}
     {{-- <td>{{request()->user()->posts->find(7)}}</td>
     <td>{{$value->user->id}}</td> --}}
         <td>{{$value->user->name}}</td>
@@ -53,5 +53,9 @@
 
   </tbody>
 </table>
+
+<div class="row w-75 text-center mx-auto justify-content-center">
+  <div class="col-md-4 ">{{$posts->links()}}</div>
+</div>
 @endsection
 

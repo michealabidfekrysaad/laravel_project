@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     function index () {
         // dd(request()->user()->posts);
-        $posts=Post::all(); //el post de beta3et el model ale anabakalem beh el DB
+        $posts=Post::paginate(3); //el post de beta3et el model ale anabakalem beh el DB
         return view('posts.index',[ 'posts' => $posts]);
     }
         
